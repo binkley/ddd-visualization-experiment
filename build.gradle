@@ -3,6 +3,7 @@ plugins {
   id "eclipse"
   id "org.xtext.builder" version "2.0.7"
   id "application"
+  id "com.github.ben-manes.versions" version "0.42.0"
 }
 
 group = 'org.contextmapper'
