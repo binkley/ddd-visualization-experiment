@@ -4,7 +4,13 @@
 
 This is an example project illustrating how the
 [Context Mapper DSL (CML)](https://github.com/ContextMapper/context-mapper-dsl)
-language can be used as standalone library outside the Eclipse IDE.
+language can be used as standalone library outside of IDEs like VSCode or 
+Eclipse.
+
+* `contextmap` -- a simple PNG and SVG image of your model
+* `generic`
+* `mdsl` -- MSDL files for your model to futher consume or process
+* `plantuml` -- PlantUML files for your model to further consume or process
 
 ## Build
 
@@ -81,19 +87,20 @@ or [contact us](https://contextmapper.org/getting-involved/).
 
 ## CLI
 
-This example project also contains a `jar` that can be used from a CLI. To use
-it, you can build the project using any IDE, and use the generated `jar`. The
-available arguments are:
+The library built by this project is usable by you directly in your projects.
+You can also use the command line tool to process CML model files into 
+several output formats.
+
+To use the jar, you can build the project using any IDE, and use the
+generated `jar`.
+It accepts these command line flags:
 
 ```
- -f,--file <arg>       CML file
- -o,--output <arg>     output folder
+ -f,--file <arg>       CML file [mandatory]
+ -o,--output <arg>     output folder [default: src-gen]
  -p,--template <arg>   freemarker template
- -t,--type <arg>       type of generator
+ -t,--type <arg>       type of generator [mandatory]
 ```
-
-The `file` and `type` arguments are mandatory. If you don't specify an
-`output` it uses `src-gen` folder.
 
 The `type` of generators available are:
 
@@ -107,6 +114,18 @@ As an example to run from a command line:
 ```
 java -jar context-mapper-standalone-example-1.0.0-SNAPSHOT.jar -f Insurance-Example-Model.cml -t contextmap
 ```
+
+This example creates files in the `src-gen` directory at the root of the 
+project. Open the `src-gen/Insurance-Example-Model_ContextMap.png` file to 
+see a picture of the example model.
+
+### IDE Support
+
+ContextMapper is directly supported for
+[VSCode](https://github.com/ContextMapper/vscode-extension) and
+[Eclipse](https://contextmapper.org/docs/eclipse/).
+IntelliJ works with generated PlantUML files but treats ContextMapper's CML 
+files as text.
 
 ## Contributing
 
