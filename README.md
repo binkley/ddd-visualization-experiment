@@ -6,12 +6,12 @@ This is an example project illustrating how the [Context Mapper DSL (CML)](https
 ## Build
 The Context Mapper DSL library releases are available via the Maven central repository and can therefore be integrated within your Maven or Gradle builds.
 
-**Gradle:**
+### Gradle
 ```gradle
 implementation 'org.contextmapper:context-mapper-dsl:6.3.0'
 ```
 
-**Maven:**
+### Maven
 ```xml
 <dependency>
   <groupId>org.contextmapper</groupId>
@@ -19,7 +19,9 @@ implementation 'org.contextmapper:context-mapper-dsl:6.3.0'
   <version>6.3.0</version>
 </dependency>
 ```
-If you want to use our SNAPSHOT's built from the master branch ([context-mapper-dsl](https://github.com/ContextMapper/context-mapper-dsl)) you have to use the following repository: https://oss.sonatype.org/content/repositories/snapshots
+If you want to use [our SNAPSHOTs built from the main branch]
+(https://github.com/ContextMapper/context-mapper-dsl) you have to include the 
+following repository: https://oss.sonatype.org/content/repositories/snapshots
 
 ### Gradle Xtext Builder Plugin
 This example project is built with Gradle. Have a look at [build.gradle](./build.gradle) how it is configured. With the Xtext builder plugin you ensure that your CML files are compiled at build time.
@@ -68,4 +70,3 @@ Contribution is always welcome! Here are some ways how you can contribute:
 
 ## Licence
 ContextMapper is released under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
-
