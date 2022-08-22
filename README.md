@@ -99,15 +99,15 @@ It accepts these command line flags:
  -f,--file <arg>       CML file [mandatory]
  -o,--output <arg>     output folder [default: src-gen]
  -p,--template <arg>   freemarker template
- -t,--type <arg>       type of generator [mandatory]
+ -t,--type <arg>       type of generator [mandatory: contextmap, generic, mdsl, or plantuml]
 ```
 
 The `type` of generators available are:
 
-* `contextmap`
+* `contextmap` -- top-level images of the model
 * `generic`
-* `mdsl`
-* `plantuml`
+* `mdsl` -- MDSL files for the model
+* `plantuml` -- PlantUML files for the model
 
 As an example to run from a command line:
 
